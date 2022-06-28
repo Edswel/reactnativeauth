@@ -5,6 +5,7 @@ import { createUser } from '../utils/auth';
 
 function SignupScreen() {
   const [isAuthenticating, setIsAuthenticating] = useState(false);
+
   async function signupHandler({ email, password }) {
     setIsAuthenticating(true);
     await createUser(email, password);
